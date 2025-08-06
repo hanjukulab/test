@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>自動採点</title>
+</head>
+<body>
+  <h2>問題1：3 × 4 = ?</h2>
+  <input type="number" id="answer" placeholder="ここに答えを入力">
+  <button onclick="grade()">採点する</button>
+
+  <p id="result"></p>
+
+  <script>
+    function grade() {
+      const userAnswer = document.getElementById('answer').value;
+      const correctAnswer = 12;
+
+      if (parseInt(userAnswer) === correctAnswer) {
+        document.getElementById('result').innerText = "〇　Collect！";
+      } else {
+        document.getElementById('result').innerText = "×　Incollect！";
+      }
+    }
+  </script>
+</body>
+</html>
